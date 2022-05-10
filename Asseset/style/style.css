@@ -1,0 +1,375 @@
+* {
+  margin: 0;
+  padding: 0;
+  /* height: 100%; */
+  font-family: Arial, Helvetica, sans-serif;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.wapper {
+  background-color: #141414;
+  /* min-width: 1050px;*/ /*if you want to fix the size of pagee */
+  min-height: 100%;
+  color: #fff;
+}
+.SignInContaier {
+  background-color: #efefee;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.column {
+  background-color: #fff;
+  min-height: 300px;
+  max-height: 100%;
+  width: 450px;
+  box-shadow: rgb(0 0 0 / 10%) 1px 2px 2px;
+  padding: 20px 35px 35px 35px;
+  overflow-y: auto;
+}
+
+/* @media only screen and (max-height: 640px) { // only practice perpose 
+  .column {
+    overflow-y: auto;
+  }
+} */
+
+.column form {
+  display: flex;
+  flex-direction: column;
+}
+
+.column form input[type="text"],
+.column form input[type="email"],
+.column form input[type="password"] {
+  margin: 12px 0;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid #dedede;
+  padding: 5px;
+}
+.column form input[type="submit"] {
+  background-color: #4285f4;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  height: 36px;
+  width: 90px;
+  padding: 10px 0;
+  font-weight: 500;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.column .header {
+  padding: 20px 0px 40px 0px;
+}
+.column .header h3 {
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 32px;
+  margin: 0px;
+  padding-top: 10px;
+  color: #000;
+}
+.column .header span {
+  font-size: 14px;
+}
+
+.column .header img {
+  width: 150px;
+  margin: 0px -1vh;
+}
+
+.column .signInMessage {
+  font-size: 14px;
+  font-weight: 400;
+  text-decoration: none;
+  color: #4285f4;
+}
+
+.errorMessage {
+  color: #f00;
+  padding-left: 5px;
+  font-size: 10px;
+  font-weight: 400;
+  opacity: 90%;
+}
+
+.previewContainer {
+  display: flex;
+  position: relative;
+  /* height: 100vh; */
+}
+/* TODO : aling the video and image properly  */
+.previewImage,
+.previewVideo {
+  width: 100%;
+  height: 100%;
+}
+.previewOverlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.301);
+  position: absolute;
+}
+/*  TODO : remove scroll bar under the preview sqare ; */
+.previewContainer.small {
+  width: 230px;
+  height: 129px;
+  margin-right: 4px;
+  display: inline-flex;
+}
+.previewContainer.small img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.mainDetails h3 {
+  color: #fff;
+  margin: 15px 0px;
+  font-size: 40px;
+}
+.mainDetails h4 {
+  color: #fff;
+  margin: 15px 0px;
+  font-size: 20px;
+}
+.mainDetails {
+  position: relative;
+  top: 35%;
+  margin-left: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+.buttons button {
+  background-color: rgba(51, 51, 51, 0.356);
+  color: #fff;
+  /* border: 2px solid #fff; */
+  border: none;
+  border-radius: 5px;
+  min-width: 150px;
+  padding: 0 38px;
+  height: 50px;
+  max-height: 50px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.buttons i {
+  color: inherit;
+  padding-right: 5px;
+}
+
+.buttons button:hover {
+  background-color: #e6e6e6;
+  color: #000;
+}
+
+.category {
+  display: flex;
+  flex-direction: column;
+  pad: 10px 0;
+}
+
+.entities,
+.videos {
+  overflow-y: hidden;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.category h3 {
+  padding: 20px 0px;
+  color: #e4e4e4;
+}
+
+.category h3:hover {
+  color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+.previewCategory {
+  padding: 0 50px;
+}
+
+.errorBanner {
+  width: 100%;
+  position: absolute;
+  top: 25%;
+  text-align: center;
+  align-items: center;
+  font-size: 40px;
+  font-weight: 600;
+}
+
+h3 {
+  margin: 15px 0px;
+  font-size: 18px;
+}
+
+.season {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 50px;
+}
+
+.episodContainer {
+  display: inline-flex;
+  justify-content: center;
+  margin-right: 5px;
+  margin-top: 10px;
+}
+.episodContainer .content {
+  width: 230px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.episodContainer img {
+  width: 230px;
+  height: 130px;
+  object-fit: cover;
+}
+.episodContainer .videoInfo h4,
+.episodContainer .videoInfo span {
+  width: 100%;
+  white-space: normal;
+  color: #fff;
+  padding: 20px 0 20px 0;
+}
+
+.episodContainer .videoInfo {
+  overflow: hidden;
+  max-height: 200px;
+  overflow-y: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.videoContainer video {
+  width: 100%;
+  height: 100%;
+}
+
+.videoControl {
+  z-index: 1;
+  width: 100%;
+  display: flex;
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.3);
+  align-items: center;
+  padding: 20px;
+}
+
+.videoControl h1 {
+  color: #fff;
+}
+.videoControl button {
+  color: #fff;
+  background-color: transparent;
+  padding: 20px 30px;
+  border: none;
+  font-size: 30px;
+}
+.videoControl i {
+  color: #fff;
+}
+
+.upNext {
+  height: 100%;
+  justify-content: center;
+}
+.upNextContainer button {
+  padding: 0;
+}
+.upNextContainer h2,
+.upNextContainer h3 {
+  color: #fff;
+}
+.watchNow {
+  z-index: 2;
+}
+
+.seen {
+  color: #2ecc71;
+  font-size: 26px;
+  position: absolute;
+  top: 5px;
+  left: 5px;
+}
+
+.topBar{
+  position: fixed;
+  width: 100%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+  height: 70px;
+  box-sizing: border-box;
+  transition: background-color 200ms linear;
+}
+
+.topBar.srolled{
+  background-color: #141414;
+  transition: background-color 200ms linear;
+}
+
+.logoContainer{
+  height: 40px;
+}
+.logoContainer img{
+  height: 100%;
+}
+
+.navLink{
+  display: flex;
+  list-style: none;
+}
+
+.navLink a{
+  color: #fff;
+  font-size: 14px;
+  margin-left: 20px;
+
+}
+
+.rightItem{
+  text-align: right;
+  flex: 1;
+}
+.rightItem i{
+  color: #fff;
+  font-size: 20px;
+  margin-left: 20px;
+}
+
+.previewCategory h1{
+  color: #fff;
+}
+
+.textBoxContainer{
+  padding: 100px 50px;
+}
+
+.searchInput{
+  height: 50px;
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: transparent;
+  color: #fff;
+  border: 1px solid #dedede;
+  border-radius: 3px;
+}
